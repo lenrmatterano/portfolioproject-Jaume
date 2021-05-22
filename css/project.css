@@ -1,0 +1,58 @@
+.project{
+	padding-block-start: 40px;
+	padding-block-end  : 40px;
+}
+
+.project-image img{
+	max-inline-size: 100%;
+}
+.project-description{
+	display       : flex;
+	flex-direction: column;
+	gap           : 16px;
+
+}
+.card{
+	background     : rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(39.7657px);
+	padding        : 24px;
+	font           : var(--body1);
+	border-radius  : 24px;
+	box-shadow     : -7px -5px 0px -4px rgba(255, 255, 255, 0.3);
+	margin-top     : 80px;
+	margin-bottom  : 40px;
+	max-inline-size: 700px;
+	margin: auto;
+}
+.card-img{
+	text-align: center;
+}
+
+.card p + p{
+	font          : var(--caption);
+	letter-spacing: 0.4px;
+}
+
+@media screen and (min-width: 768px) {
+	.project{
+		display            : flex;
+		align-items        : center;
+		gap                : 32px;
+		padding-block-start: 80px;
+		padding-block-end  : 80px;
+	}
+	.project-description{
+		flex: 1;
+	}
+	.project:nth-child(even) .project-image{
+
+		order     : 2;
+		flex      : 1;
+		text-align: center;
+	}
+	.card{
+		padding        : 35px;
+		font           : var(--headline5);
+		text-align     : center;
+	}
+}
